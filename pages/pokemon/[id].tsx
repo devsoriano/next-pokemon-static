@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { Button, Card, Container, Grid, Text, Image } from "@nextui-org/react";
+import {
+  Button,
+  Card,
+  Container,
+  Grid,
+  Text,
+  Image,
+  Row,
+} from "@nextui-org/react";
 import { GetStaticProps, GetStaticPaths, NextPage } from "next";
 import confetti from "canvas-confetti";
 
@@ -61,13 +69,15 @@ const PokemonPage: NextPage<Props> = ({ pokemon }) => {
               <Text h1 transform="capitalize">
                 {pokemon.name}
               </Text>
-              <Button
-                color="gradient"
-                ghost={!isInFavorites}
-                onClick={onToggleFavorite}
-              >
-                {isInFavorites ? "En favoritos" : "Guardar en favoritos"}
-              </Button>
+              <Row>
+                <Button
+                  color="gradient"
+                  ghost={!isInFavorites}
+                  onClick={onToggleFavorite}
+                >
+                  {isInFavorites ? "En favoritos" : "Guardar en favoritos"}
+                </Button>
+              </Row>
             </Card.Header>
             <Card.Body>
               <Text size={30}>Sprites:</Text>
