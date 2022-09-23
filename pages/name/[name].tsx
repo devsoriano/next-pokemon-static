@@ -78,7 +78,6 @@ const PokemonByNamePage: NextPage<Props> = ({ pokemon }) => {
               <Text h1 transform="capitalize">
                 {pokemon.name}
               </Text>
-              <Text size={30}>Sprites:</Text>
               <Container direction="row" display="flex">
                 <Image
                   src={pokemon.sprites.front_default}
